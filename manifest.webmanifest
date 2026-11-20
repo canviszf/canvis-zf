@@ -1,1 +1,20 @@
 
+{
+  "name": "Canvis Zona Franca",
+  "short_name": "Canvis ZF",
+  "description": "Sol·licituds de canvis de guàrdia",
+  "start_url": "/canvis-zf/",
+  "scope": "/canvis-zf/",
+  "display": "standalone",
+  "background_color": "#f8f5f5",
+  "theme_color": "#9d171b",
+  "icons": [
+    {
+      "src": "/canvis-zf/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
+

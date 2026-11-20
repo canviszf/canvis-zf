@@ -2,206 +2,31 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#9d171b">
-<meta name="apple-mobile-web-app-title" content="Canvis ZF">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
-<link rel="icon" type="image/png" href="./icon-180.png">
-<title>Canvis Zona Franca</title>
-<style>
-:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#29252a;background:#f8f5f5}
-*{box-sizing:border-box}
-body{margin:0}
-header{background:linear-gradient(125deg,#7f1016,#c5282d);color:white;padding:26px 18px 30px}
-main{max-width:760px;margin:-12px auto 48px;padding:0 12px}
-.head{max-width:760px;margin:auto}
-.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#ffcece;font-weight:700}
-h1{margin:5px 0 5px;font-size:clamp(25px,6vw,34px)}
-header p{margin:0;color:#ffe3e3;font-size:14px}
-.card{background:#fff;border:1px solid #eee1e1;border-radius:18px;padding:17px;margin-bottom:14px;box-shadow:0 6px 18px #4b12120a}
-.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
-h2{font-size:18px;margin:0 0 13px}
-.count{background:#fce6e6;color:#9d171b;padding:5px 9px;border-radius:30px;font-weight:750;font-size:12px}
-.filters{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 3px}
-label{display:block;font-size:13px;font-weight:700;margin:0 0 6px;color:#5a4444}
-input,select{width:100%;border:1px solid #d9c9c9;border-radius:11px;background:white;padding:12px;font:inherit;min-height:45px;color:#2b2525}
-input:focus,select:focus{outline:2px solid #e99898;border-color:#b71e25}
-.item{padding:15px 0;border-bottom:1px solid #f1e5e5}
-.item:last-child{border-bottom:0}
-.itemhead{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.name{font-weight:750;font-size:16px;overflow-wrap:anywhere}
-.park{background:#fbe4e4;color:#951a21;border-radius:20px;padding:5px 9px;font-size:12px;font-weight:800}
-.details{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:9px;font-size:13px;color:#625858}
-.chip{background:#f5f1f1;padding:5px 8px;border-radius:7px}
-.ga{background:#fff0d5;color:#79510b}
-.btn{display:block;width:100%;padding:13px 16px;background:#b71f28;color:white;border:0;border-radius:12px;font-size:15px;font-weight:800;cursor:pointer;min-height:47px;text-align:center;text-decoration:none}
-.btn.secondary{background:#f5e7e7;color:#7f1016}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.field.full{grid-column:1/-1}
-.actions{display:flex;gap:9px;margin-top:16px}
-.actions>*{flex:1}
-.hidden{display:none!important}
-.status{font-size:13px;color:#675757;margin-top:10px;min-height:18px}
-.empty{text-align:center;padding:30px 12px;color:#7a6969}
-footer{text-align:center;font-size:12px;color:#887878;padding:6px 16px 30px}
-button:focus-visible{outline:3px solid #ee9a9a;outline-offset:2px}
-@media(max-width:370px){.filters{grid-template-columns:1fr}.details{gap:5px}}
-.chip.turn,.park{font-weight:800;border:1px solid transparent}
-.turn-A{background:#93C5FD;color:#1E3A8A;border-color:#93C5FD!important}
-.turn-B{background:#DC2626;color:#FFFFFF;border-color:#DC2626!important}
-.turn-C{background:#FFFFFF;color:#222222;border-color:#CCCCCC!important}
-.turn-D{background:#4ADE80;color:#14532D;border-color:#4ADE80!important}
-.turn-E{background:#FEF08A;color:#854D0E;border-color:#FEF08A!important}
-.park-SA{background:#ccfbf1;color:#0f766e;border-color:#99f6e4!important}
-.park-VH{background:#e0e7ff;color:#4338ca;border-color:#c7d2fe!important}
-.park-EIX{background:#fef3c7;color:#92400e;border-color:#fde68a!important}
-.park-MJ{background:#f3e8ff;color:#7e22ce;border-color:#e9d5ff!important}
-.park-LL{background:#ffedd5;color:#c2410c;border-color:#fed7aa!important}
-.park-ZF{background:#fee2e2;color:#b91c1c;border-color:#fecaca!important}
-.park-VA{background:#dcfce7;color:#15803d;border-color:#bbf7d0!important}
-.chip.ga{background:#C4B5FD;color:#5B21B6;border-color:#C4B5FD!important}
-.notice{background:#fff5dd;border:1px solid #f4d79d;border-radius:12px;padding:12px;font-size:13px;color:#704b0a;margin-bottom:14px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Canvis Zona Franca</title>
+
+  <!-- Icona personalitzada -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
+  <link rel="icon" type="image/png" href="./icon-180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <meta name="apple-mobile-web-app-title" content="Canvis ZF">
+  <meta name="theme-color" content="#9d171b">
+
+  <!-- Redirecció automàtica -->
+  <meta http-equiv="refresh"
+        content="0;url=https://script.google.com/macros/s/AKfycbzKCHTEvZvlTcRsFbNlGmfq8HSyfaYa3Ytp5bcJYBe9ZZ7_BPWyBDFSgRPTdP72IMmO/exec">
 </head>
+
 <body>
-<header>
-  <div class="head">
-    <div class="eyebrow">🚒 Bombers · Tauler compartit</div>
-    <h1>Canvis Zona Franca</h1>
-    <p>Sol·licituds de canvis de guàrdia</p>
-  </div>
-</header>
-<main>
-  <div class="notice">
-    <strong>Versió de proves de GitHub.</strong>
-    La connexió amb Google Sheets encara no està activada.
-    Per consultar, afegir o eliminar sol·licituds reals,
-    obre l'aplicació actual.
-  </div>
+  <script>
+    window.location.replace(
+      "https://script.google.com/macros/s/AKfycbzKCHTEvZvlTcRsFbNlGmfq8HSyfaYa3Ytp5bcJYBe9ZZ7_BPWyBDFSgRPTdP72IMmO/exec"
+    );
+  </script>
 
-  <section class="card">
-    <div class="top">
-      <h2>Sol·licituds pendents</h2>
-      <span class="count" id="count">—</span>
-    </div>
-    <div class="filters">
-      <div>
-        <label for="fTurn">Torn</label>
-        <select id="fTurn">
-          <option value="">Tots els torns</option>
-          <option>A</option><option>B</option>
-          <option>C</option><option>D</option><option>E</option>
-        </select>
-      </div>
-      <div>
-        <label for="fPark">Parc</label>
-        <select id="fPark">
-          <option value="">Tots els parcs</option>
-          <option>SA</option><option>VH</option>
-          <option>EIX</option><option>MJ</option>
-          <option>LL</option><option>ZF</option><option>VA</option>
-        </select>
-      </div>
-    </div>
-    <div id="list" aria-live="polite">
-      <div class="empty">
-        Encara no hi ha connexió amb les sol·licituds reals.
-      </div>
-    </div>
-    <a class="btn secondary"
-       href="https://script.google.com/macros/s/AKfycbzKCHTEvZvlTcRsFbNlGmfq8HSyfaYa3Ytp5bcJYBe9ZZ7_BPWyBDFSgRPTdP72IMmO/exec">
-      ↻ Consultar llista real
-    </a>
-    <div class="status" id="status" role="status">
-      Connexió pendent de configurar.
-    </div>
-  </section>
-
-  <section class="card">
-    <button class="btn" id="toggle" type="button">
-      ＋ Afegir canvi
-    </button>
-    <form id="form" class="hidden">
-      <h2 style="margin-top:16px">Nova sol·licitud</h2>
-      <div class="fields">
-        <div class="field full">
-          <label for="name">Nom del company o companya</label>
-          <input id="name" maxlength="80" autocomplete="name"
-                 required placeholder="Nom i cognoms">
-        </div>
-        <div class="field full">
-          <label for="date">Data de la guàrdia</label>
-          <input id="date" type="date" required>
-        </div>
-        <div class="field">
-          <label for="turn">Torn</label>
-          <select id="turn">
-            <option>A</option><option>B</option>
-            <option>C</option><option>D</option><option>E</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="type">Tipus</label>
-          <select id="type">
-            <option>Ordinària</option><option>GA</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="park">Parc</label>
-          <select id="park">
-            <option>ZF</option><option>SA</option>
-            <option>VH</option><option>EIX</option>
-            <option>MJ</option><option>LL</option><option>VA</option>
-          </select>
-        </div>
-      </div>
-      <div class="actions">
-        <button class="btn secondary" id="cancel" type="button">
-          Cancel·lar
-        </button>
-        <button class="btn" type="submit">
-          Continuar a l'app actual
-        </button>
-      </div>
-      <p class="status">
-        Aquest formulari és només una previsualització.
-        No desarà dades en aquesta versió.
-      </p>
-    </form>
-  </section>
-</main>
-
-<footer>
-  Versió de proves · Les dades reals continuen a Google Sheets.
-</footer>
-
-<script>
-'use strict';
-
-const APP_URL = 'https://script.google.com/macros/s/AKfycbzKCHTEvZvlTcRsFbNlGmfq8HSyfaYa3Ytp5bcJYBe9ZZ7_BPWyBDFSgRPTdP72IMmO/exec';
-const $ = id => document.getElementById(id);
-
-$('toggle').addEventListener('click', () => {
-  $('form').classList.remove('hidden');
-  $('toggle').classList.add('hidden');
-});
-
-$('cancel').addEventListener('click', () => {
-  $('form').classList.add('hidden');
-  $('toggle').classList.remove('hidden');
-});
-
-$('form').addEventListener('submit', e => {
-  e.preventDefault();
-  window.location.href = APP_URL;
-});
-
-$('date').value = new Date(
-  Date.now() - new Date().getTimezoneOffset() * 60000
-).toISOString().slice(0,10);
-</script>
+  <p>Obrint Canvis Zona Franca...</p>
 </body>
 </html>
-

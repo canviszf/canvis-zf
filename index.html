@@ -13,7 +13,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
 
   <meta name="apple-mobile-web-app-title" content="Canvis ZF">
-  <meta name="theme-color" content="#9d171b">
+  <meta name="theme-color" content="#080000">
 
   <style>
     * {
@@ -24,45 +24,62 @@
       margin: 0;
       min-height: 100vh;
       min-height: 100dvh;
+
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      background: linear-gradient(145deg, #7f1016, #c5282d);
+
+      background-color: #080000;
+      background-image: url("./portada-canvis-zf.png");
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+
       font-family: -apple-system, BlinkMacSystemFont,
                    "Segoe UI", sans-serif;
       color: white;
       text-align: center;
-      padding: 24px;
+
+      padding: clamp(55px, 12vh, 125px) 24px 220px;
     }
 
     .container {
       width: 100%;
-      max-width: 380px;
+      max-width: 440px;
+      position: relative;
+      z-index: 1;
     }
 
-
-    
     .logo {
       width: 180px;
       height: 180px;
       border-radius: 28%;
-      clip-path: inset(0 round 28%);
       object-fit: cover;
-      margin-bottom: 28px;
+      display: block;
+      margin: 0 auto 28px;
     }
 
-    
-
     h1 {
-      font-size: 30px;
-      margin: 0 0 10px;
+      font-size: clamp(28px, 6vw, 38px);
+      margin: 0 0 14px;
       font-weight: 800;
+      line-height: 1.15;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.3);
+    }
+
+    .linea {
+      width: 65px;
+      height: 5px;
+      background: #ff2028;
+      border-radius: 10px;
+      margin: 20px auto;
     }
 
     p {
-      font-size: 16px;
+      font-size: 17px;
       color: #ffe0e0;
-      margin: 0 0 36px;
+      margin: 0 0 40px;
+      line-height: 1.5;
     }
 
     .button {
@@ -70,21 +87,45 @@
       background: white;
       color: #9d171b;
       text-decoration: none;
-      padding: 18px 24px;
-      border-radius: 14px;
-      font-size: 18px;
+      padding: 19px 20px;
+      border-radius: 17px;
+      font-size: 19px;
       font-weight: 800;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
 
     .button:active {
       transform: scale(0.98);
     }
 
-    .footer {
-      margin-top: 36px;
-      font-size: 12px;
-      color: #ffd0d0;
+    @media (max-width: 480px) {
+      body {
+        padding-top: 65px;
+        padding-bottom: 230px;
+        background-position: center bottom;
+      }
+
+      .logo {
+        width: 145px;
+        height: 145px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 15px;
+        margin-bottom: 32px;
+      }
+
+      .button {
+        font-size: 17px;
+        padding: 17px 14px;
+      }
     }
   </style>
 </head>
@@ -101,6 +142,8 @@
 
     <h1>Canvis Zona Franca</h1>
 
+    <div class="linea"></div>
+
     <p>Sol·licituds de canvis de guàrdia</p>
 
     <a
@@ -110,12 +153,7 @@
       🚒 Entrar a l'aplicació
     </a>
 
-    <div class="footer">
-      Bombers de Barcelona · Zona Franca
-    </div>
-
   </main>
 
 </body>
 </html>
-
